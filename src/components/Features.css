@@ -1,0 +1,44 @@
+/* Feature Dogs */
+
+.features__df {
+    width: 100%;
+    max-width: 3840px;
+    height: 720px;
+}
+
+.features__title {
+    font-size: 44px;
+    font-weight: 600;
+    text-align: center;
+    padding: 26px 0;
+}
+
+.features__list-item {
+    list-style: none;
+}
+
+.features__figure-crop {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.featured-dogs__name {
+    color: #ff2c2c;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.features__p {
+    line-height: 34px;
+}
+
+.features__link {
+    background-color: #ff2c2c;
+    color: #fdfbd4;
+    /* border: 1px solid #fdfbd4; */
+    border-radius: 12px;
+    padding: 4px 10px;
+}

@@ -1,0 +1,174 @@
+/* Adoption Form */
+.form__h1-title {
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+    color: #ff2c2c;
+    margin: 44px 0;
+    width: 100%;
+    max-width: 3840px;
+}
+
+.form__table-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form__table-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.form__no-dogs {
+    margin: 0 auto;
+    padding: 50px 0;
+    height: 150px;
+}
+
+.form__table-header {
+    display: flex;
+    background-color: #ff2c2c;
+    color: #fdfbd4;
+    width: 90%;
+}
+
+.form__header-desc {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 4px 14px;
+    margin-right: 1140px;
+}
+
+.form__header-fee {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 4px 0;
+}
+
+.form__table-details {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 12px auto;
+}
+
+.form__table-img {
+    margin: 0 8px;
+}
+
+.form__table-name {
+    color: #ff2c2c;
+    font-weight: 400;
+    width: 86%;
+}
+
+.form__remove-button {
+    margin-top: 12px;
+    width: 66px;
+    padding: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #ff2c2c;
+    color: #ff2c2c;
+    background-color: #fdfbd4;
+    font-size: 14px;
+}
+
+.form__table-total-fee {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 14px auto 0;
+    padding: 4px;
+    border: 2px solid #ff2c2c;
+    border-radius: 4px;
+    background-color: #fdfbd4;
+}
+
+.form__h2-title {
+    color: #ff2c2c;
+    font-size: 24px;
+    font-weight: 500;
+    width: 95%;
+    padding-left: 14px;
+}
+
+.form__app {
+    margin: 40px auto;
+    max-width: 3840px;
+    width: 90%;
+}
+
+.form__line {
+    margin-bottom: 16px;
+}
+
+.form__label {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.form__df {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__addr {
+    display: flex;
+}
+
+.form__padding {
+    padding-right: 12px;
+}
+
+.form__name {
+    width: 260px;
+}
+
+.form__preferredContact {
+    margin-bottom: 44px;
+}
+
+.form__autocomplete .input__style {
+    width: 600px;
+    padding: 0;
+}
+
+.form__ownership {
+    margin-left: 200px;
+}
+
+.form__textarea {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+}
+
+#reasonForDog {
+    height: 60px;
+}
+
+#dogAllergies {
+    margin-right: 200px;
+}
+
+#walkingTimes {
+    height: 30px;
+}
+
+#confirmation, #optInSubscribe {
+    margin-right: 12px;
+}
+
+.form__submit-button {
+    width: 180px;
+    padding: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #ff2c2c;
+    color: #fdfbd4;
+    background-color: #ff2c2c;
+    font-weight: 500;
+}

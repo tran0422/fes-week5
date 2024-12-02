@@ -1,0 +1,16 @@
+/* Calendar */
+.cal__df {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.cal__title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #ff2c2c;
+    margin-top: 62px;
+    margin-bottom: 32px;
+}
