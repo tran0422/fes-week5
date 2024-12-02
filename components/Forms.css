@@ -123,8 +123,17 @@
     padding-right: 12px;
 }
 
+.form__name {
+    width: 260px;
+}
+
 .form__preferredContact {
     margin-bottom: 44px;
+}
+
+.form__autocomplete .input__style {
+    width: 600px;
+    padding: 0;
 }
 
 .form__ownership {
