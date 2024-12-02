@@ -1,0 +1,75 @@
+/* Volunteer Page */
+.volunteer__df {
+    display: flex;
+    justify-content: space-around;
+    max-width: 3840px;
+    width: 100%;
+    height: 700px;
+}
+
+.event-volunteer__panel {
+    width: 100%;
+    max-width: calc(80% / 2);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-volunteer__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ff2c2c;
+    margin: 84px 0 14px;
+    text-align: center;
+}
+
+.event-volunteer__duties {
+    height: 370px;
+}
+
+.event-volunteer__subtitle {
+    font-weight: 500;
+    color: #ff2c2c;
+    margin-bottom: 14px;
+}
+
+.event-volunteer__description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-left: 16px;
+    height: 140px;
+}
+
+.event-volunteer__list {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 14px;
+    margin-left: 16px;
+}
+
+.event-volunteer__button {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 4px;
+    border-radius: 20px;
+    border: 2px solid #ff2c2c;
+    margin: 0 auto;
+    color: #ff2c2c;
+    background-color: #fdfbd4;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.foster-volunteer__button {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 4px;
+    border-radius: 20px;
+    border: none;
+    margin: 0 auto;
+    color: #fdfbd4;
+    background-color: #ff2c2c;
+    font-weight: 400;
+    cursor: pointer;
+}
