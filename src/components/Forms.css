@@ -6,7 +6,7 @@
     color: #ff2c2c;
     margin: 44px 0;
     width: 100%;
-    max-width: 3840px;
+    /* max-width: 3840px; */
 }
 
 .form__table-container {
@@ -97,7 +97,7 @@
 
 .form__app {
     margin: 40px auto;
-    max-width: 3840px;
+    /* max-width: 3840px; */
     width: 90%;
 }
 
