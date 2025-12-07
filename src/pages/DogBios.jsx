@@ -36,16 +36,21 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
         }, 8000);
     };
 
+const generatePicURL = (picID) => {
+    const templateURL = specificDog.attributes.pictureThumbailUrl;
+    return templateURL.replace(/\/[^/]+\.jpg/,`/${picID}.jpg`);
+};
+
     return (
         <div className="specific__width">
             <div className="specific__df">
                 <div className="specific__gallery">
-                    {specificDog.pictures.map(pic => (
+                    {specificDog.relationships.pictures.data.map(pic => {
                         <img 
-                            key={pic.id}
-                            src={pic.attributes.large || pic.attributes.original} 
-                            alt={specificDog.attributes.name} />
-                    ))}
+                        key={pic.id}
+                        src={generatePicURL(pic.id)}
+                        alt="" />
+                    })}
                 </div>
                 <img src={specificDog.attributes.relationships.pictures.data} alt="" className='specific__img' />
                 <div className="specific__section-container">
