@@ -39,7 +39,7 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
     return (
         <div className="specific__width">
             <div className="specific__df">
-                <img src={specificDog.attributes.pictureThumbnailUrl} alt="" className='specific__img' />
+                <img src={specificDog.attributes.relationships.pictures.data} alt="" className='specific__img' />
                 <div className="specific__section-container">
                     <p className="specific__title">{specificDog.attributes.name}</p>
                     <p className='specific__sub-title'>Breed: {specificDog.attributes.breedString}</p>
