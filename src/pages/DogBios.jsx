@@ -36,23 +36,28 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
         }, 8000);
     };
 
-const generatePicURL = (picID) => {
-    const templateURL = specificDog.attributes.pictureThumbailUrl;
-    return templateURL.replace(/\/[^/]+\.jpg/,`/${picID}.jpg`);
-};
+    // Helper: generate picture URL safely
+    const generatePictureUrl = (picId) => {
+        const templateUrl = specificDog.attributes.pictureThumbnailUrl;
+        return templateUrl.replace(/\/[^/]+\.jpg/, `/${picId}.jpg`);
+    };
 
     return (
         <div className="specific__width">
             <div className="specific__df">
+
                 <div className="specific__gallery">
-                    {specificDog.relationships.pictures.data.map(pic => {
-                        <img 
-                        key={pic.id}
-                        src={generatePicURL(pic.id)}
-                        alt="" />
-                    })}
+                    {specificDog.relationships.pictures.data.map(pic => (
+                        <img
+                            key={pic.id}
+                            src={generatePictureUrl(pic.id)}
+                            alt={specificDog.attributes.name}
+                            className="specific__img"
+                        />
+                    ))}
                 </div>
-                <img src={specificDog.attributes.relationships.pictures.data} alt="" className='specific__img' />
+
+                <img src={specificDog.attributes.pictureThumbnailUrl} alt="" className='specific__img' />
                 <div className="specific__section-container">
                     <p className="specific__title">{specificDog.attributes.name}</p>
                     <p className='specific__sub-title'>Breed: {specificDog.attributes.breedString}</p>
@@ -69,9 +74,9 @@ const generatePicURL = (picID) => {
             {ifDogExist() ? (
                 <Link to={"/Forms"}>
                     <button className="specific__button">Go to App
-                    {isAdopted && isHeartAnimating && (
-                        <FontAwesomeIcon icon={faHeart} className="heart-icon animating" />
-                    )}
+                        {isAdopted && isHeartAnimating && (
+                            <FontAwesomeIcon icon={faHeart} className="heart-icon animating" />
+                        )}
                     </button>
                 </Link>
             ) : (
