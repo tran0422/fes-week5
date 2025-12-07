@@ -14,18 +14,14 @@ const DogsApi = ({ dogs, setDogs }) => {
     const mountRef = useRef(true);
 
     const fetchDogs = useCallback(async () => {
-        const apiUrl = 'https://api.rescuegroups.org/v5/public/orgs/2802/animals/search/available';
+        const apiUrl = 'https://api.rescuegroups.org/v5/public/orgs/2802/animals/search/available?limit=250';
 
-        const response = await axios.get(apiUrl,
-            {
-                headers: {
-                    Authorization: `mR4p0XQv`,
-                },
-            }
+        const response = await axios.get(apiUrl, {
+            headers: {
+                Authorization: `mR4p0XQv`,
+            },
+        });
 
-        );
-
-        console.log(response);
         // Updating state with the fetched data
         setDogs(response.data.data);
         setLoading(false);
