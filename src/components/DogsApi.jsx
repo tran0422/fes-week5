@@ -25,6 +25,7 @@ const DogsApi = ({ dogs, setDogs }) => {
 
         );
 
+        console.log(response);
         // Updating state with the fetched data
         setDogs(response.data.data);
         setLoading(false);
