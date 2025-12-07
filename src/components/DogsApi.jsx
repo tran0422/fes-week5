@@ -16,10 +16,7 @@ const DogsApi = ({ dogs, setDogs }) => {
     const fetchDogs = useCallback(async () => {
         const apiUrl = 'https://api.rescuegroups.org/v5/public/orgs/2802/animals/search/available';
 
-        const response = await axios.post(apiUrl, {
-            include: ["pictures"],
-            limit: 250
-        },
+        const response = await axios.get(apiUrl,
             {
                 headers: {
                     Authorization: `mR4p0XQv`,
@@ -28,18 +25,8 @@ const DogsApi = ({ dogs, setDogs }) => {
 
         );
 
-        // Responses from post
-        const animals = response.data.data;
-        const pictures = response.data.included;
-
-        // Merge animals (data) and pictures
-        const dogWithPic = animals.map(dog => {
-            const dogPics = dog.relationships.pictures.data.map(picRef => pictures.find(pic => pic.id === picRef.id)).filter(Boolean);
-
-            return {...dog, pictures: dogPics}
-        })
         // Updating state with the fetched data
-        setDogs(dogWithPic);
+        setDogs(response.data.data);
         setLoading(false);
     }, [setDogs]);
 
