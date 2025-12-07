@@ -52,12 +52,11 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
                             key={pic.id}
                             src={generatePictureUrl(pic.id)}
                             alt={specificDog.attributes.name}
-                            className="specific__img"
+                            className=""
                         />
                     ))}
                 </div>
 
-                <img src={specificDog.attributes.pictureThumbnailUrl} alt="" className='specific__img' />
                 <div className="specific__section-container">
                     <p className="specific__title">{specificDog.attributes.name}</p>
                     <p className='specific__sub-title'>Breed: {specificDog.attributes.breedString}</p>
