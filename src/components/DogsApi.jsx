@@ -28,8 +28,18 @@ const DogsApi = ({ dogs, setDogs }) => {
 
         );
 
+        // Responses from post
+        const animals = response.data.data;
+        const pictures = response.data.included;
+
+        // Merge animals (data) and pictures
+        const dogWithPic = animals.map(dog => {
+            const dogPics = dog.relationships.pictures.data.map(picRef => pictures.find(pic => pic.id === picRef.id)).filter(Boolean);
+
+            return {...dog, pictures: dogPics}
+        })
         // Updating state with the fetched data
-        setDogs(response.data.data);
+        setDogs(dogWithPic);
         setLoading(false);
     }, [setDogs]);
 
