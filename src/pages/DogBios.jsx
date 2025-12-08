@@ -39,22 +39,26 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
     // Helper: generate picture URL safely
     const generatePictureUrl = (picId) => {
         const templateUrl = specificDog.attributes.pictureThumbnailUrl;
-        return templateUrl.replace(/\/[^/]+\.jpg/, `/${picId}.jpg`);
+        return templateUrl.replace(/\/[^/]+\.jpg(\?.*)?$/, `/${picId}.jpg`);
     };
+
+    const allPic = specificDog.relationships.pictures.data;
+    const firstPic = allPic[0];
+    const remainingPic = allPic.slice(1);
 
     return (
         <div className="specific__width">
             <div className="specific__df">
 
-                <div className="specific__gallery">
-                    {specificDog.relationships.pictures.data.map(pic => (
+                <div>
+                    {firstPic && (
                         <img
-                            key={pic.id}
-                            src={generatePictureUrl(pic.id)}
+                            key={firstPic.id}
+                            src={generatePictureUrl(firstPic.id)}
                             alt={specificDog.attributes.name}
-                            className=""
+                            className="specific__img"
                         />
-                    ))}
+                    )}
                 </div>
 
                 <div className="specific__section-container">
@@ -66,7 +70,18 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
                     <p className='specific__sub-title'>Vaccination Status: {specificDog.attributes.isCurrentVaccinations ? 'Current' : 'Pending'}</p>
                     <p className='specific__sub-title'>Adoption Fee: {specificDog.attributes.adoptionFeeString || 'N/A'}</p>
                 </div>
+
+                <div className="specific__gallery">
+                    {remainingPic.map((pic) => (
+                        <img
+                            key={pic.id}
+                            src={generatePictureUrl(pic.id)}
+                            alt={specificDog.attributes.name}
+                            className="specific__remainingImg" />
+                    ))}
+                </div>
             </div>
+
 
             <p className="specific__p" dangerouslySetInnerHTML={{ __html: specificDog.attributes.descriptionText }} />
 
