@@ -9,6 +9,7 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
     const [isAdopted, setIsAdopted] = useState(false);
     const [isHeartAnimating, setIsHeartAnimating] = useState(false);
     const buttonRef = useRef(null); // Referencing the Adopt button
+    const [modalImg, setModalImg] = useState(null); // Ref. modal state
 
     const { id } = useParams();
     const specificDog = dogs.find(dog => +dog.id === +id);
@@ -57,6 +58,7 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
                             src={generatePictureUrl(firstPic.id)}
                             alt={specificDog.attributes.name}
                             className="specific__img"
+                            onClick={() => setModalImg(generatePictureUrl(firstPic.id))}
                         />
                     )}
                 </div>
@@ -77,7 +79,8 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
                             key={pic.id}
                             src={generatePictureUrl(pic.id)}
                             alt={specificDog.attributes.name}
-                            className="specific__remainingImg" />
+                            className="specific__remainingImg" 
+                            onClick={() => setModalImg(generatePictureUrl(pic.id))} />
                     ))}
                 </div>
             </div>
@@ -95,6 +98,14 @@ const DogBios = ({ dogs, addToAdoptApp, adoptApp, setHeartPosition }) => {
                 </Link>
             ) : (
                 <button ref={buttonRef} className="specific__button" onClick={handleAdoptClick}>Adopt {specificDog.attributes.name}</button>
+            )}
+
+            {modalImg && (
+                <div className="modal" onClick={() => setModalImg(null)}>
+                    <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+                        <img src={modalImg} alt="" />
+                    </div>
+                </div>
             )}
         </div>
     )
