@@ -12,3 +12,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
