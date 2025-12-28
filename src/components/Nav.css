@@ -84,3 +84,8 @@ a {
     opacity: 1;
     transform: scale(1);
 }
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
