@@ -7,7 +7,7 @@ const Nav = ({ numberOfApp }) => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="nav__df tw-max-md:tw-px-6">
+        <nav className="nav__df tw-max-md:tw-px-0">
             <Link to="/" className="nav__link nav__logo__corp tw-max-md:tw-hidden">
                 <img className="nav__logo tw-max-md:tw-hidden" src="https://img.freepik.com/premium-vector/dog-cat-paw-print-heart-icon-paw-print-animal-paw-vector-illustration_654297-128.jpg" alt="" />
             </Link>
@@ -37,11 +37,11 @@ const Nav = ({ numberOfApp }) => {
                 {open && (
                     <div className="tw-absolute tw-top-full tw-w-screen tw-h-screen tw-right-0 tw-flex tw-flex-col tw-bg-white tw-gap-4 tw-py-4 tw-px-2">
                         <ul className="tw-list-none tw-p-0 tw-m-0 tw-flex tw-flex-col tw-gap-4">
-                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-24" to="/">Home</Link></li>
-                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-24" to="/AvailableDogs">Available Dogs</Link></li>
-                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-24" to="Volunteers">Get Involved</Link></li>
-                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-24" to="/Donate">Donate</Link></li>
-                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-24" to="/Forms">Apply for Adoption</Link></li>
+                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-8" to="/">Home</Link></li>
+                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-8" to="/AvailableDogs">Available Dogs</Link></li>
+                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-8" to="Volunteers">Get Involved</Link></li>
+                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-8" to="/Donate">Donate</Link></li>
+                            <li><Link className="tw-block tw-text-left tw-text-xl tw-py-2 tw-px-8" to="/Forms">Apply for Adoption</Link></li>
                         </ul>
                     </div>
                 )}
