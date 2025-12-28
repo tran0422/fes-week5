@@ -29,7 +29,7 @@ const VolunteerLanding = () => {
                         </ul>
                     </div>
 
-                    <button className="event-volunteer__button"><FontAwesomeIcon icon={faHand} /> Event Volunteer Form</button>
+                    <button className="event-volunteer__button" onClick={()=> window.open("https://docs.google.com/forms/d/e/1FAIpQLScelAtkfE0nP76fjOVXA8BUsTiwdj3xxYKt0OBhOuJFIhQX2w/viewform", "_blank")}><FontAwesomeIcon icon={faHand} /> Event Volunteer Form</button>
                 </div>
                 <div className="event-volunteer__panel">
                     <p className="event-volunteer__title">Foster Volunteers</p>
@@ -55,7 +55,7 @@ const VolunteerLanding = () => {
                         </ul>
                     </div>
 
-                    <button className="foster-volunteer__button"><FontAwesomeIcon icon={faHouse} /> Foster Volunteer Form</button>
+                    <button className="foster-volunteer__button" onClick={()=>window.open("https://docs.google.com/forms/d/e/1FAIpQLSdMAE5DWEaVC0cI1g77r8a_n0dVe5f4Niqp4fx_xIW69w5DPA/viewform", "_blank")}><FontAwesomeIcon icon={faHouse} /> Foster Volunteer Form</button>
                 </div>
 
             </section>
